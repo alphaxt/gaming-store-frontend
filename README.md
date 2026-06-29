@@ -1,73 +1,100 @@
-# Alpha Gaming: Your Ultimate Gaming Storefront 🎮
+# 🎮 Alpha Gaming: Your Ultimate Gaming Storefront
 
------
+A fun, responsive **e-commerce frontend** for gamers. Browse games, consoles, and accessories, search instantly, add items to a cart, and check out — all in a clean, modern layout.
 
-### Welcome to the Store\! 👋
+This is a **completely static, frontend-only** project: plain **HTML, CSS, and JavaScript**, with product data driven by a single `products.json` file. No build step, no framework, no backend required.
 
-This project is a fun and simple e-commerce website designed for gamers. You can browse through a huge collection of games, add them to your cart, and see a clean, beautiful layout. It's a completely frontend-focused project, built to give you a great online shopping experience.
+---
 
------
+## ✨ Features
 
-### ✨ What You'll Find
+- **Massive Game Library** — games, consoles, and accessories in one catalog 🕹️
+- **Shopping Cart** — add items, manage quantities, and proceed to checkout 🛒
+- **Instant Search** — quickly filter products by name 🔍
+- **Fully Responsive** — works great on mobile, tablet, and desktop 📱🖥️
+- **Data-Driven Catalog** — products are loaded from `products.json`, so adding new games/consoles doesn't require touching HTML by hand 📦
+- **Clean, Modern UI** — simple, friendly design with per-page styling ✨
 
-We packed this store with some cool features to make shopping easy and fun\!
+---
 
-  * **A Massive Game Library:** Explore different games, consoles, and accessories all in one place. 🕹️
-  * **Your Personal Cart:** Add games to your cart and manage your list before checkout. 🛒
-  * **Instant Search:** Quickly find exactly what you're looking for with a super-fast search bar. 🔍
-  * **Looks Great on Any Screen:** The design is fully responsive, so it works perfectly on your phone, tablet, or desktop. 📱🖥️
-  * **Clean and Simple Look:** The site has a friendly, easy-to-use design with a modern vibe. ✨
+## 💻 Tech Stack
 
------
+| Layer | Tech |
+|---|---|
+| Structure | HTML5 |
+| Styling | CSS3 (global + per-page stylesheets) |
+| Behavior | Vanilla JavaScript |
+| Data | JSON (`products.json`) |
 
-### 💻 The Tech Behind the Scenes
+> No npm, no React, no build tools — just open the HTML files in a browser.
 
-This project is built using a few core technologies that make it all work seamlessly.
+---
 
-  * **React:** Think of this as the main "engine" that builds all the different parts of the website, like the product cards and the shopping cart. ⚛️
-  * **JavaScript:** This is the magic that makes everything interactive, from adding items to your cart to searching for games. 📜
-  * **CSS:** This is what makes the website look awesome. It handles all the colors, layouts, and animations. 🎨
+## 🧩 Project Structure
 
------
+```
+Gaming-store/
+├── .github/
+│   └── copilot-instructions.md
+├── html-child/              # individual pages: per-category & per-game
+│   ├── games.html, consoles.html, accessories.html
+│   ├── cart.html, checkout.html, contact.html
+│   ├── Gamingnews.html, special.html
+│   └── elden_ring.html, gta5.html, zelda.html, tekken8.html, ... (per-title pages)
+├── script-child/
+│   ├── consolesscript.js     # logic for the consoles page
+│   └── gamesscript.js        # logic for the games page
+├── styles-child/
+│   └── *.css                 # one stylesheet per page (cart, checkout, each game, etc.)
+├── images/                   # product photos & social icons
+├── index.html                 # homepage
+├── script.js                  # global / shared JavaScript
+├── script1.js                  # additional global JavaScript
+├── style.css                   # global stylesheet
+├── styles.css                  # additional global stylesheet
+├── products.json               # full product catalog (games, consoles, accessories)
+├── PRODUCTS_JSON_README.md     # schema/docs for products.json
+├── example-json-usage.html     # demo: how to read products.json on a page
+├── LICENSE                     # MIT
+└── README.md
+```
 
-### 🧩 The Building Blocks
+---
 
-The whole website is made up of simple, reusable parts called components. This makes the code organized and easy to understand\!
+## 🚀 Getting Started
 
-  * **Product Card:** A mini card for each game, showing its picture and name.
-  * **Navigation Bar:** The bar at the top with the logo, search bar, and cart icon.
-  * **Shopping Cart:** The page that shows all the items you've selected.
+No installation needed — this is a static site.
 
------
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/alphaxt/Gaming-store.git
+   cd Gaming-store
+   ```
 
-### 🚀 Getting Started
+2. **Open it in a browser:**
+   - Easiest: double-click `index.html`, **or**
+   - Recommended (avoids JSON/fetch issues with `file://` URLs): serve it locally:
+     ```bash
+     # Python 3
+     python -m http.server 5500
+     # then visit http://localhost:5500
+     ```
+     or use the **Live Server** extension in VS Code.
 
-Want to see it in action on your computer? It's super simple\!
+That's it — browse, search, add to cart, and check out.
 
-1.  **Grab the code:**
-    ```bash
-    git clone https://github.com/alphaxt/Gaming-store.git
-    ```
-2.  **Go to the project folder:**
-    ```bash
-    cd Gaming-store
-    ```
-3.  **Install the necessary stuff:**
-    ```bash
-    npm install
-    ```
-4.  **Launch the site\!**
-    ```bash
-    npm run dev
-    ```
-    The website will open in your browser at a local address like `http://localhost:5173`. Enjoy\!
+---
 
------
+## 📦 Product Data
 
-### 📜 License
+All catalog data (games, consoles, accessories) lives in [`products.json`](./products.json). See [`PRODUCTS_JSON_README.md`](./PRODUCTS_JSON_README.md) for the full schema, and [`example-json-usage.html`](./example-json-usage.html) for a working example of reading it on a page.
 
-This project is licensed under the **MIT License**.
+---
 
------
+## 📜 License
+
+This project is licensed under the **MIT License** — see [LICENSE](./LICENSE) for details.
+
+---
 
 **Developed by Muhammad Danish**
